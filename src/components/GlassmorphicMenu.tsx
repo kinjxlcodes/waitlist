@@ -102,18 +102,8 @@ export default function GlassmorphicMenu() {
                 }}
                 aria-label={item.label}
               >
-                <div 
-                  className="absolute inset-0 flex items-center justify-center"
-                  style={{
-                    color: activeItem === item.id
-                      ? 'rgb(17, 24, 39)'
-                      : 'inherit'
-                  }}
-                >
-                  {React.cloneElement(item.icon as React.ReactElement, {
-                    className: 'w-6 h-6',
-                    style: { color: 'currentColor', stroke: 'currentColor' }
-                  })}
+                <div className="absolute inset-0 flex items-center justify-center">
+                  {item.icon}
                 </div>
               </button>
             ))}
