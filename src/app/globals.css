@@ -63,6 +63,19 @@ html.dark {
   border-color: rgb(255 69 58) !important;
 }
 
+/* Light mode text colors - explicit */
+html:not(.dark) h1,
+html:not(.dark) h2,
+html:not(.dark) h3,
+html:not(.dark) h4,
+html:not(.dark) h5,
+html:not(.dark) h6,
+html:not(.dark) p,
+html:not(.dark) span,
+html:not(.dark) div {
+  color: inherit;
+}
+
 /* Override inline styles in dark mode */
 .dark * {
   color: white !important;
@@ -86,21 +99,7 @@ html.dark {
   background-color: rgb(220 38 38) !important; /* darker vermillion */
 }
 
-/* Preserve active menu button colors in dark mode */
-.dark .bg-gray-100,
-.dark .bg-gray-100 *,
-.dark .bg-gray-100 svg,
-.dark .dark\:bg-cyan-400,
-.dark .dark\:bg-cyan-400 *,
-.dark .dark\:bg-cyan-400 svg {
-  color: rgb(17 24 39) !important; /* gray-900 */
-}
-
-/* Force SVG stroke color for active menu icons */
-.dark .bg-gray-100 svg path,
-.dark .dark\:bg-cyan-400 svg path {
-  stroke: rgb(17 24 39) !important;
-}
+/* Menu button icon colors are now handled inline in the component */
 
 @keyframes fade-in {
   from {
