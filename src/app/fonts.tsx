@@ -11,6 +11,10 @@ export function Fonts() {
         href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap" 
         rel="stylesheet" 
       />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet"
+      />
     </>
   )
 }

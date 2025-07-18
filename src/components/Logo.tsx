@@ -19,7 +19,10 @@ export default function Logo({ className = '' }: LogoProps) {
           priority
         />
       </div>
-      <span className="text-xl sm:text-2xl md:text-3xl font-light text-gray-800 dark:text-white font-raleway">
+      <span 
+        className="text-xl sm:text-2xl md:text-3xl text-gray-800 dark:text-white"
+        style={{ fontFamily: '"Raleway", sans-serif', fontWeight: 400 }}
+      >
         MyDecisions
       </span>
     </div>

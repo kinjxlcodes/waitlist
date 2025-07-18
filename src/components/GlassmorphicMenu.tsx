@@ -89,12 +89,12 @@ export default function GlassmorphicMenu() {
                 }}
                 className={`relative rounded-full transition-all duration-300 ${
                   activeItem === item.id
-                    ? 'w-14 h-14 shadow-lg'
+                    ? 'w-14 h-14 shadow-lg menu-button-active'
                     : 'w-14 h-14'
                 }`}
                 style={{
                   backgroundColor: activeItem === item.id 
-                    ? (isDarkMode ? 'rgb(34, 211, 238)' : 'rgb(243, 244, 246)') 
+                    ? (isDarkMode ? 'rgb(255, 255, 255)' : 'rgb(243, 244, 246)') 
                     : 'transparent',
                   color: activeItem === item.id
                     ? 'rgb(17, 24, 39)'
@@ -102,8 +102,18 @@ export default function GlassmorphicMenu() {
                 }}
                 aria-label={item.label}
               >
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {item.icon}
+                <div 
+                  className="absolute inset-0 flex items-center justify-center"
+                  style={{
+                    color: activeItem === item.id
+                      ? 'rgb(17, 24, 39)'
+                      : 'inherit'
+                  }}
+                >
+                  {React.cloneElement(item.icon as React.ReactElement, {
+                    className: 'w-6 h-6',
+                    style: { color: 'currentColor', stroke: 'currentColor' }
+                  })}
                 </div>
               </button>
             ))}

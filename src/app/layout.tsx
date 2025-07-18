@@ -1,17 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Raleway, IBM_Plex_Sans } from "next/font/google";
+import { Inter, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
 import { Fonts } from "./fonts";
 
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
-});
-
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-  display: "swap",
 });
 
 const ibmPlexSans = IBM_Plex_Sans({
@@ -35,7 +29,7 @@ export default function RootLayout({
       <head>
         <Fonts />
       </head>
-      <body className={`${inter.variable} ${raleway.variable} ${ibmPlexSans.variable} antialiased text-gray-900 dark:text-white`}>
+      <body className={`${inter.variable} ${ibmPlexSans.variable} antialiased text-gray-900 dark:text-white`}>
         {children}
       </body>
     </html>

@@ -1,10 +1,33 @@
 'use client'
 
 import React from 'react'
+import Image from 'next/image'
 
 export default function HeroContent() {
   return (
     <div className="relative min-h-screen lg:h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-28 md:pt-12 py-12 pb-32 lg:py-0 lg:pb-0">
+      {/* Top Right Decoration - Desktop Only */}
+      <div className="hidden lg:block absolute top-8 right-8 w-64 h-64 opacity-50">
+        <Image
+          src="/abstract.png"
+          alt=""
+          fill
+          className="object-contain"
+          priority
+        />
+      </div>
+      
+      {/* Bottom Left Decoration - Desktop Only */}
+      <div className="hidden lg:block absolute bottom-8 left-8 w-64 h-64 opacity-50">
+        <Image
+          src="/abstract.png"
+          alt=""
+          fill
+          className="object-contain transform rotate-180"
+          priority
+        />
+      </div>
+
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8 lg:gap-16 relative">
         {/* Left Section - Main Headline */}
         <div className="space-y-6">
@@ -86,11 +109,8 @@ export default function HeroContent() {
           <div 
             className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4"
             style={{ 
-              fontFamily: 'var(--font-ibm-plex-sans)', 
-              fontWeight: 200,
-              fontOpticalSizing: 'auto',
-              fontStyle: 'normal',
-              fontVariationSettings: '"wdth" 100'
+              fontFamily: '"Raleway", sans-serif',
+              fontWeight: 400
             }}
           >
             <p>
