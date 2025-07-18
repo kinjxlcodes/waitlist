@@ -11,7 +11,7 @@ const inter = Inter({
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  display: "swap",
 });
 
 const ibmPlexSans = IBM_Plex_Sans({
