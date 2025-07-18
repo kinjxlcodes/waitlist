@@ -4,7 +4,7 @@ import React from 'react'
 
 export default function HeroContent() {
   return (
-    <div className="relative min-h-screen lg:h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 py-12 pb-32 lg:py-0 lg:pb-0">
+    <div className="relative min-h-screen lg:h-screen flex flex-col justify-center px-8 md:px-16 lg:px-24 pt-28 md:pt-12 py-12 pb-32 lg:py-0 lg:pb-0">
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8 lg:gap-16 relative">
         {/* Left Section - Main Headline */}
         <div className="space-y-6">
@@ -29,7 +29,7 @@ export default function HeroContent() {
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 pt-4">
             <button 
-              className="px-8 py-3 rounded-full bg-black dark-orange-button text-white hover:bg-gray-800 transition-colors duration-300"
+              className="px-8 py-3 rounded-full bg-black dark-orange-button text-white hover:bg-gray-800 dark:hover:bg-red-700 transition-colors duration-300"
               style={{ 
                 fontFamily: 'var(--font-ibm-plex-sans)', 
                 fontWeight: 200,
@@ -41,14 +41,13 @@ export default function HeroContent() {
               Join Waitlist
             </button>
             <button 
-              className="px-8 py-3 rounded-full border border-gray-300 text-gray-700 dark-orange hover:border-gray-400 hover:bg-gray-50 transition-all duration-300"
+              className="px-8 py-3 rounded-full border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-white dark-orange hover:border-gray-400 dark:hover:border-gray-500 hover:bg-gray-50 dark:hover:bg-gray-800 transition-all duration-300"
               style={{ 
                 fontFamily: 'var(--font-ibm-plex-sans)', 
                 fontWeight: 200,
                 fontOpticalSizing: 'auto',
                 fontStyle: 'normal',
-                fontVariationSettings: '"wdth" 100',
-                borderColor: 'var(--border-color, rgb(209 213 219))'
+                fontVariationSettings: '"wdth" 100'
               }}
             >
               Join Community
@@ -68,7 +67,7 @@ export default function HeroContent() {
               <path d="M5 12h14M12 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
             <p 
-              className="text-lg text-gray-600"
+              className="text-lg text-gray-600 dark:text-gray-300"
               style={{ 
                 fontFamily: 'var(--font-ibm-plex-sans)', 
                 fontWeight: 200,
@@ -85,7 +84,7 @@ export default function HeroContent() {
         {/* Right Section - Description */}
         <div className="lg:pl-12 lg:pt-62">
           <div 
-            className="text-base md:text-lg text-gray-600 leading-relaxed space-y-4"
+            className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-4"
             style={{ 
               fontFamily: 'var(--font-ibm-plex-sans)', 
               fontWeight: 200,
@@ -95,10 +94,10 @@ export default function HeroContent() {
             }}
           >
             <p>
-              Tired of asking <span className="font-bold dark-orange" style={{ fontWeight: 700, color: '#1a1a1a' }}>ChatGPT</span>?
+              Tired of asking <span className="font-bold dark-orange" style={{ fontWeight: 700 }}>ChatGPT</span>?
             </p>
             <p>
-              <span className="font-bold dark-orange" style={{ fontWeight: 700, color: '#1a1a1a' }}>MyDecisions</span> is the <em>first AI</em> designed only to{' '}
+              <span className="font-bold dark-orange" style={{ fontWeight: 700 }}>MyDecisions</span> is the <em>first AI</em> designed only to{' '}
               <span style={{ fontWeight: 400 }}>help you decide</span> — <em>not decide for you</em>.
             </p>
             <p>

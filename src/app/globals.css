@@ -40,40 +40,42 @@ html.dark {
   color-scheme: dark;
 }
 
-/* Dark mode text colors - only apply in dark mode */
-@media (prefers-color-scheme: dark) {
-  .dark h1,
-  .dark h2, 
-  .dark h3,
-  .dark h4,
-  .dark h5,
-  .dark h6,
-  .dark p,
-  .dark span:not(.text-transparent):not(.dark-orange),
-  .dark div:not([class*="bg-"]) {
-    color: white;
-  }
+/* Dark mode text colors */
+.dark h1,
+.dark h2, 
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6,
+.dark p {
+  color: white !important;
 }
 
-/* Light mode text colors - ensure proper colors in light mode */
-@media (prefers-color-scheme: light) {
-  .light h1,
-  .light h2, 
-  .light h3,
-  .light h4,
-  .light h5,
-  .light h6,
-  .light p,
-  .light span:not(.text-transparent):not(.dark-orange),
-  .light div:not([class*="bg-"]) {
-    color: inherit;
-  }
+/* Dark mode for all text elements except special classes */
+.dark span:not(.dark-orange),
+.dark div:not([class*="bg-"]) {
+  color: white !important;
 }
 
 /* Special dark mode vermillion text */
 .dark .dark-orange {
   color: rgb(255 69 58) !important; /* vermillion/red-orange */
   border-color: rgb(255 69 58) !important;
+}
+
+/* Override inline styles in dark mode */
+.dark * {
+  color: white !important;
+}
+
+/* Preserve specific colors */
+.dark .dark-orange,
+.dark .dark-orange * {
+  color: rgb(255 69 58) !important;
+}
+
+.dark .text-transparent {
+  color: transparent !important;
 }
 
 /* Dark mode vermillion button */
@@ -85,20 +87,17 @@ html.dark {
 }
 
 /* Preserve active menu button colors in dark mode */
-.dark .bg-white,
-.dark .bg-white *,
-.dark .bg-white svg {
-  color: rgb(17 24 39) !important; /* gray-900 */
-}
-
+.dark .bg-gray-100,
+.dark .bg-gray-100 *,
+.dark .bg-gray-100 svg,
 .dark .dark\:bg-cyan-400,
 .dark .dark\:bg-cyan-400 *,
 .dark .dark\:bg-cyan-400 svg {
   color: rgb(17 24 39) !important; /* gray-900 */
 }
 
-/* Force SVG stroke color for icons */
-.dark .bg-white svg path,
+/* Force SVG stroke color for active menu icons */
+.dark .bg-gray-100 svg path,
 .dark .dark\:bg-cyan-400 svg path {
   stroke: rgb(17 24 39) !important;
 }
