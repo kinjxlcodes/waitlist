@@ -9,7 +9,7 @@ interface LogoProps {
 
 export default function Logo({ className = '' }: LogoProps) {
   return (
-    <div className={`inline-flex items-center gap-1 px-4 py-0.5 sm:px-5 sm:py-1 md:px-6 md:py-1 rounded-full bg-white/40 dark:bg-white/10 backdrop-blur-md border border-white/50 dark:border-white/20 shadow-lg ${className}`}>
+    <div className={`inline-flex items-center gap-1 px-4 py-0.5 sm:px-5 sm:py-1 md:px-6 md:py-1 rounded-full glass-water-droplet backdrop-blur-xl backdrop-saturate-150 border border-white/30 dark:border-white/10 hover:scale-[1.02] transition-all duration-300 ${className}`}>
       <div className="relative w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14">
         <Image
           src="/orange_leaf.png"
@@ -19,7 +19,7 @@ export default function Logo({ className = '' }: LogoProps) {
           priority
         />
       </div>
-      <span className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 dark:text-white font-raleway">
+      <span className="text-xl sm:text-2xl md:text-3xl font-light text-gray-800 dark:text-white font-raleway">
         MyDecisions
       </span>
     </div>
