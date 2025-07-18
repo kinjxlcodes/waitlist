@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Raleway, IBM_Plex_Sans } from "next/font/google";
 import "./globals.css";
+import { Fonts } from "./fonts";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -31,6 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="light">
+      <head>
+        <Fonts />
+      </head>
       <body className={`${inter.variable} ${raleway.variable} ${ibmPlexSans.variable} antialiased text-gray-900 dark:text-white`}>
         {children}
       </body>

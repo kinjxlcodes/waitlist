@@ -17,7 +17,7 @@ export default function HeroContent() {
             }}>
               reshaping how<br />
             </span>
-            <span className="inline-block" style={{ fontFamily: '"Tangerine", cursive', fontWeight: 700, fontSize: '1.2em' }}>decisions</span>
+            <span className="inline-block" style={{ fontFamily: '"Tangerine", cursive', fontWeight: 400, fontSize: '1.2em' }}>decisions</span>
             <span style={{ 
               fontFamily: '"Funnel Display", sans-serif', 
               fontWeight: 300,
