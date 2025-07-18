@@ -89,7 +89,7 @@ export default function GlassmorphicMenu() {
                 }}
                 className={`relative rounded-full transition-all duration-300 ${
                   activeItem === item.id
-                    ? 'w-14 h-14 bg-white dark:bg-cyan-400 text-gray-800 dark:text-gray-900 shadow-lg'
+                    ? 'w-14 h-14 bg-gray-100 dark:bg-cyan-400 text-gray-900 shadow-lg'
                     : 'w-14 h-14 text-gray-600 dark:text-white/70 hover:text-gray-800 dark:hover:text-white'
                 }`}
                 aria-label={item.label}

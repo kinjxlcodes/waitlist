@@ -40,17 +40,34 @@ html.dark {
   color-scheme: dark;
 }
 
-/* Dark mode text colors */
-.dark h1,
-.dark h2, 
-.dark h3,
-.dark h4,
-.dark h5,
-.dark h6,
-.dark p,
-.dark span:not(.text-transparent):not(.dark-orange),
-.dark div:not([class*="bg-"]) {
-  color: white;
+/* Dark mode text colors - only apply in dark mode */
+@media (prefers-color-scheme: dark) {
+  .dark h1,
+  .dark h2, 
+  .dark h3,
+  .dark h4,
+  .dark h5,
+  .dark h6,
+  .dark p,
+  .dark span:not(.text-transparent):not(.dark-orange),
+  .dark div:not([class*="bg-"]) {
+    color: white;
+  }
+}
+
+/* Light mode text colors - ensure proper colors in light mode */
+@media (prefers-color-scheme: light) {
+  .light h1,
+  .light h2, 
+  .light h3,
+  .light h4,
+  .light h5,
+  .light h6,
+  .light p,
+  .light span:not(.text-transparent):not(.dark-orange),
+  .light div:not([class*="bg-"]) {
+    color: inherit;
+  }
 }
 
 /* Special dark mode vermillion text */

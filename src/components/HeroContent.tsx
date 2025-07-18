@@ -8,7 +8,7 @@ export default function HeroContent() {
       <div className="grid grid-cols-1 lg:grid-cols-[3fr_1fr] gap-8 lg:gap-16 relative">
         {/* Left Section - Main Headline */}
         <div className="space-y-6">
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none">
+          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl leading-none text-gray-900 dark:text-white">
             <span style={{ 
               fontFamily: '"Funnel Display", sans-serif', 
               fontWeight: 300,
